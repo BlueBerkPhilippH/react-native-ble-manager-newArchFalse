@@ -31,7 +31,9 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
-import com.facebook.react.modules.core.RCTNativeAppEventEmitter;
+// import com.facebook.react.modules.core.RCTNativeAppEventEmitter;
+import com.facebook.react.modules.core.DeviceEventManagerModule;
+
 
 import java.lang.reflect.Method;
 import java.util.Iterator;
@@ -138,7 +140,7 @@ class BleManager extends ReactContextBaseJavaModule {
     }
 
     public void sendEvent(String eventName, @Nullable WritableMap params) {
-        getReactApplicationContext().getJSModule(RCTNativeAppEventEmitter.class).emit(eventName, params);
+        getReactApplicationContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
     }
 
     @ReactMethod
