@@ -140,7 +140,9 @@ class BleManager extends ReactContextBaseJavaModule {
     }
 
     public void sendEvent(String eventName, @Nullable WritableMap params) {
-        getReactApplicationContext().getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
+        getReactApplicationContext()
+            .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
+            .emit(eventName, params);
     }
 
     @ReactMethod
@@ -912,6 +914,15 @@ class BleManager extends ReactContextBaseJavaModule {
     @ReactMethod
     public void removeListeners(Integer count) {
         // Keep: Required for RN built in Event Emitter Calls.
+    }
+
+    @ReactMethod
+    public void testEventBridge(){
+        
+        WritableMap map = Arguments.createMap();
+        map.putInt("status", 0);
+
+        sendEvent("BleManagerDidTestEventBridge"; map)
     }
 
     @Override
