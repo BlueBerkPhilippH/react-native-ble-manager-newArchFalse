@@ -917,12 +917,12 @@ class BleManager extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void testEventBridge(){
+    private void testEventBridge(){
         
         WritableMap map = Arguments.createMap();
         map.putInt("status", 0);
 
-        sendEvent("BleManagerDidTestEventBridge"; map)
+        sendEvent("BleManagerDidTestEventBridge", map);
     }
 
     @Override

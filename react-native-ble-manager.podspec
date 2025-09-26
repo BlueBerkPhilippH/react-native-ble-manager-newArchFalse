@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage    	= "https://github.com/innoveit/react-native-ble-manager"
   s.license     	= "Apache-2.0"
   s.platform    	= :ios, "10.0"
-  s.source      	= { :git => "https://github.com/innoveit/react-native-ble-manager.git" }
+  s.source      	= { :git => "https://github.com/BlueBerkPhilippH/react-native-ble-manager-newArchFalse.git" }
   s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift}"
 
   s.dependency 'React-Core'
